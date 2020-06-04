@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 from pathlib import Path
 SCRIPT_PATH = Path(__file__).parent
-COMPARTMENTS = SCRIPT_PATH / "./bin/compartments.exe"
+COMPARTMENTS = (SCRIPT_PATH / "bin/compartments.exe").resolve()
 
 import clr
 clr.AddReference(str(COMPARTMENTS))
