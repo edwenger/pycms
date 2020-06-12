@@ -1,5 +1,10 @@
 # CMS From Python Proof of Concept with [Python.NET](https://pythonnet.github.io/)
 
+## Documentation
+
+* [1-pager overview](https://github.com/InstituteforDiseaseModeling/pycms/blob/master/specs/one-pager.md)
+* [Specification](https://github.com/InstituteforDiseaseModeling/pycms/blob/master/specs/specification.md)
+
 ## Setup
 
 - consider creating a virtual environment with `python -m virtualenv venv`
