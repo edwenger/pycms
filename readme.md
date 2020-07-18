@@ -37,3 +37,13 @@
 - Investigate building `compartments` with .NET Core on macOS &| Linux.
 - Look for Python.NET to [support .NET Core](https://github.com/pythonnet/pythonnet/issues/984)
 - Might need [IronScheme](https://github.com/IronScheme/IronScheme) to compile against .NET Core if we don't have "Additional Extensions" above.
+
+### Python.Net [Troubleshooting Installation on Linux](https://github.com/pythonnet/pythonnet/wiki/Troubleshooting-on-Windows,-Linux,-and-OSX#2-build-and-install-from-command-line)
+
+- requires mono-complete or mono-devel
+- requires clang (`sudo apt-get install clang`)
+- requires glib (`sudo apt-get install libglib2.0-dev`)
+- requires python-dev
+
+- `sudo pip3 install pythonnet` fails with `error: option --single-version-externally-managed not recognized`
+- try `sudo pip3 install --egg git+https://github.com/pythonnet/pythonnet`
