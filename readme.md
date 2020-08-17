@@ -13,6 +13,9 @@ $ docker pull idm-docker-staging.packages.idmod.org/pycms:9778b45_1597692284
 #
 $ docker run --rm -it -v $(pwd):/host idm-docker-staging.packages.idmod.org/pycms:9778b45_1597692284 python3 /host/seir.py
 
+# Or, if you are in windows command prompt:
+c:\pycms> docker run --rm -it -v %cd%:/host idm-docker-staging.packages.idmod.org/pycms:9778b45_1597692284 python3 /host/seir.py
+
 # The docker tag above includes a specific revision after the ":". IDM Artifactory is not yet set up for ":latest", see this ticket: https://helpdesk.idmod.org/browse/REQUEST-12766
 # After we fix that ticket, you'll usually just use ":latest".
 ```
