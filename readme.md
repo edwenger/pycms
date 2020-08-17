@@ -3,6 +3,10 @@
 ## Quick Start
 
 ```bash
+# You should only have to do this once on your system. Use your user@idmod.org login.
+#
+$ docker login idm-docker-staging.packages.idmod.org
+
 $ docker pull idm-docker-staging.packages.idmod.org/pycms:9778b45_1597692284
 
 # Run this from the directory where your python scripts live. The container will see them under '/host/'.
