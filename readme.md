@@ -1,5 +1,15 @@
 # CMS From Python Proof of Concept with [Python.NET](https://pythonnet.github.io/)
 
+## Quick Start
+
+```bash
+$ docker pull idm-docker-staging.packages.idmod.org/pycms:9778b45_1597692284
+$ docker run --rm -it -v $(pwd):/host idm-docker-staging.packages.idmod.org/pycms:9778b45_1597692284 python3 /host/seir.py
+
+# The docker tag above includes a specific revision after the ":". IDM Artifactory is not yet set up for ":latest", see this ticket: https://helpdesk.idmod.org/browse/REQUEST-12766
+# After we fix that ticket, you'll usually just use ":latest".
+```
+
 ## Documentation
 
 * [1-pager overview](https://github.com/InstituteforDiseaseModeling/pycms/blob/master/specs/one-pager.md)
