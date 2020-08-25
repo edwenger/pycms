@@ -67,3 +67,16 @@ c:\pycms> docker run --rm -it -v %cd%:/host idm-docker-staging.packages.idmod.or
 
 - `sudo pip3 install pythonnet` fails with `error: option --single-version-externally-managed not recognized`
 - try `sudo pip3 install --egg git+https://github.com/pythonnet/pythonnet`
+
+### Python.Net Installation on macOS
+
+- These instructions assume Python 3 on the machine [(download here)](https://www.python.org/downloads/).
+- [install homebrew](https://brew.sh/)
+- install pkg-config with `brew install pkg-config`
+- [install mono for macOS](https://www.mono-project.com/download/stable/)
+- **Note: mono includes a `mono-2.pc` file compatible with pkg-config, but does not put it where pkg-config can find it.**
+  - verify that the `mono-2.pc` file is in the following location: `/Library/Frameworks/Mono.framework/Versions/6.10.0/lib/pkgconfig/`
+  - run the following command to help `pkg-config` find `mono-2.pc`:  
+    `export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/6.10.0/lib/pkgconfig/`
+  - verify that `pkg-config` sees the `mono-2.pc` file by running `pkg-config --libs mono-2`
+- install Python.Net with `pip3 install pythonnet` (_alternatively_ install the latest Python.Net with `pip3 install git+https://github.com/pythonnet/pythonnet`)
