@@ -11,6 +11,7 @@ parser = ArgumentParser()
 # If you are using the pycms docker container, this will be the case. Note that the default value
 # doesn't have ".exe" at the end of it.
 parser.add_argument("-c", "--compartments", default="compartments", help="Specify full path to compartments.exe")
+parser.add_argument("-p", "--png", action="store_true", help="Save output to a .png file")
 
 args = parser.parse_args()
 
@@ -42,7 +43,11 @@ def main():
     for index, label in enumerate(solver.GetTrajectoryLabels()):
         plt.plot([float(value) for value in data[index]], label=str(label))
     plt.legend()
-    plt.show()
+    if not args.png:
+        plt.show()
+    else:
+        print("Saving plot to 'trajectory.png'")
+        plt.savefig("trajectory.png")
 
     return
 
