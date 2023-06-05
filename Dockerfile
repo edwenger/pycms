@@ -15,3 +15,5 @@ RUN pip3 install numpy matplotlib scipy
 ENV PYTHONPATH=/app
 
 COPY bin /app
+COPY seir.py /app
+COPY cmsmodel.py /app
