@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 /app/seir.py --png
+python3 /app/seir.py --png | tail -1
