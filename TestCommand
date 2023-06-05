@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 /host/seir.py
+python3 /app/seir.py --png
