@@ -16,5 +16,8 @@
 			"ms-python.python"
 		  ]
 		}
-	}
+	},
+	"remoteEnv": {
+		"PYTHONPATH": "/workspaces/pycms/bin"
+	 }
 }
